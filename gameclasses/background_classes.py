@@ -19,6 +19,7 @@ class Planet(pygame.sprite.Sprite):
         self.rect.x = 15
         self.rect.center = (random.randrange(0, data.screen.get_size()[0]), -self.image.get_size()[1])
         self.vel = random.randrange(1, 4)
+        self.spin = random.randrange(40, 50)
 
     def update(self):
         self.rect.y += self.vel

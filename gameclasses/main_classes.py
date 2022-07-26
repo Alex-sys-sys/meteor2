@@ -21,9 +21,9 @@ class Player(pygame.sprite.Sprite):
     def update(self):
         self.mask = pygame.mask.from_surface(self.image)
         key = pygame.key.get_pressed()
-        print(pygame.sprite.spritecollideany(self, data.allmeteors))
-        if pygame.sprite.spritecollideany(self, data.allmeteors):
-            self.kill()
+        # print(pygame.sprite.spritecollideany(self, data.allmeteors))
+        # if pygame.sprite.spritecollideany(self, data.allmeteors):
+        #     self.kill()
         if key[pygame.K_UP] or key[pygame.K_w]:
             if data.count % 5 == 0:
                 self.image = self.animation_spis[self.animation_count]
