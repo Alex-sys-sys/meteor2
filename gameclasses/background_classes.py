@@ -2,12 +2,12 @@ import pygame
 import data
 import random
 
-planet1 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/planet1.png')
-planet2 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/planet2.png')
-planet3 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/planet3.png')
-planet4 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/planet4.png')
-met1 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/meteor1.png')
-star = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/star.png')
+planet1 = pygame.image.load('/images/background/planet1.png')
+planet2 = pygame.image.load('/images/background/planet2.png')
+planet3 = pygame.image.load('/images/background/planet3.png')
+planet4 = pygame.image.load('/images/background/planet4.png')
+met1 = pygame.image.load('/images/background/meteor1.png')
+star = pygame.image.load('/images/background/star.png')
 
 
 class Planet(pygame.sprite.Sprite):
