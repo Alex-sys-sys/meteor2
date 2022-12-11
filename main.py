@@ -33,6 +33,7 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
+    data.cursor = pygame.mouse.get_pos()
     data.allsprites.update()
     data.allsprites.draw(data.screen)
     player.update()
