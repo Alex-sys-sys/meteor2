@@ -6,4 +6,4 @@ allsprites = pygame.sprite.Group()
 allmeteors = pygame.sprite.Group()
 count = 0
 
-pygame.display.set_icon(pygame.image.load('/images/background/planet1.png'))
+pygame.display.set_icon(pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/background/planet1.png'))

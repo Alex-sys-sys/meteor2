@@ -15,7 +15,6 @@ run = True
 font = pygame.font.Font(None, 40)
 font2 = pygame.font.Font(None, 70)
 player = Player()
-data.allsprites.add(Meteor(), Planet())
 
 while run:
     data.count += 1
