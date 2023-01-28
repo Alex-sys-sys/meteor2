@@ -18,18 +18,18 @@ player = Player()
 
 while run:
     data.count += 1
-    if data.count % 15 == 0:
+    if data.count % 20 == 0:
         st = Star()
         data.allsprites.add(st)
     if data.count % 200 == 0:
         pl = Planet()
         data.allsprites.add(pl)
-    if data.count % 50 == 0:
+    if data.count % 40 == 0:
         mt = Meteor()
         data.allsprites.add(mt)
         data.allmeteors.add(mt)
     pygame.time.Clock().tick(fps)
-    data.screen.fill((0, 0, 0))
+    data.screen.fill((10, 7, 1))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False

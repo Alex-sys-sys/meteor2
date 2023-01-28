@@ -38,17 +38,17 @@ class Player(pygame.sprite.Sprite):
         #         self.image = self.animation_spis[self.animation_count]
         #         self.animation_count = (self.animation_count + 1) % 2
         if key[pygame.K_DOWN] or key[pygame.K_s]:
-            self.rect.y += 8
+            self.rect.y += 9
         if key[pygame.K_RIGHT] or key[pygame.K_d]:
-            self.rect.x += 8
+            self.rect.x += 9
         if key[pygame.K_LEFT] or key[pygame.K_a]:
-            self.rect.x -= 8
+            self.rect.x -= 9
         if key[pygame.K_UP] or key[pygame.K_w]:
-            self.rect.y -= 8
+            self.rect.y -= 9
         if (key[pygame.K_k] and self.cooldown == 0) or (pygame.mouse.get_pressed()[0] is True and self.cooldown == 0):
-            bull = Bullet(15, self.rect.center, angle)
+            bull = Bullet(20, self.rect.center, angle)
             data.allsprites.add(bull)
-            self.cooldown = 7
+            self.cooldown = 5
         self.image = pygame.transform.rotate(self.image, 360 - (math.degrees(angle) + 90))
 
 
@@ -70,5 +70,6 @@ class Bullet(pygame.sprite.Sprite):
             a[0].killed = True
         self.rect.x += self.vx
         self.rect.y += self.vy
-        if self.rect.y < 0:
+        if data.screen.get_height() < self.rect.y or self.rect.y < 0 or data.screen.get_width() < \
+                self.rect.x or self.rect.x < 0:
             self.kill()

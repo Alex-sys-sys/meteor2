@@ -1,6 +1,7 @@
 import pygame
 import data
 import random
+import math
 
 planet1 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/background/planet1.png')
 planet2 = pygame.image.load('/Users/aleksejerofeev/venv/pythonProject/meteor2/images/background/planet2.png')
@@ -38,11 +39,14 @@ class Meteor(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
         self.count = 0
         self.killed = False
+        self.velocity = 4
+        self.vx = random.randrange(-5, 5)
 
     def update(self):
         if self.killed is False:
-            self.rect.y += 4
-            if self.rect.bottom > 1000:
+            self.rect.y += 6
+            self.rect.x += self.vx
+            if self.rect.bottom > 800 or self.rect.right > 1200 or self.rect.left < 50:
                 self.kill()
         else:
             self.count += 1
